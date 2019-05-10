@@ -29,10 +29,10 @@ object FakeRepository : BestPizzasRepository {
         pizzas.clear()
     }
 
-    fun count() = pizzas.size
-
      override fun changePizzaGrade(pizza: Pizza, newGrade: Int){
         pizzas.first{it.id == pizza.id}.grade = newGrade
     }
+
+    fun count() = pizzas.size
 
 }
