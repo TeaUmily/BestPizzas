@@ -12,10 +12,11 @@ import osc.ada.terezijaumiljanovic.R
 import osc.ada.terezijaumiljanovic.bestpizzas.model.Pizza
 import osc.ada.terezijaumiljanovic.bestpizzas.persistence.BestPizzasRepository
 import osc.ada.terezijaumiljanovic.bestpizzas.persistence.FakeRepository
+import osc.ada.terezijaumiljanovic.bestpizzas.persistence.PizzaRoomRepository
 
 class AddPizzaFragmentDialog : DialogFragment() {
 
-    private val repository: BestPizzasRepository = FakeRepository
+    private val repository: BestPizzasRepository = PizzaRoomRepository()
     private var pizzaAddedListener: PizzaAddedListener? = null
     private var grade: Int = 1
 

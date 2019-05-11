@@ -8,6 +8,7 @@ import osc.ada.terezijaumiljanovic.R
 import osc.ada.terezijaumiljanovic.bestpizzas.model.Pizza
 import osc.ada.terezijaumiljanovic.bestpizzas.persistence.BestPizzasRepository
 import osc.ada.terezijaumiljanovic.bestpizzas.persistence.FakeRepository
+import osc.ada.terezijaumiljanovic.bestpizzas.persistence.PizzaRoomRepository
 import osc.ada.terezijaumiljanovic.bestpizzas.ui.fragments.addpizza.AddPizzaFragmentDialog
 import osc.ada.terezijaumiljanovic.bestpizzas.ui.fragments.addpizza.PizzaAddedListener
 import osc.ada.terezijaumiljanovic.bestpizzas.ui.base.BaseFragment
@@ -18,7 +19,7 @@ class PizzasFragment : BaseFragment(), PizzaAddedListener, ClearAllListener, OnG
     GradeChangedListener {
 
 
-    private val repository: BestPizzasRepository = FakeRepository
+    private val repository: BestPizzasRepository = PizzaRoomRepository()
     private val adapter by lazy { PizzaAdapter(mutableListOf(), this) }
 
     override fun getLayoutResourceId() = R.layout.fragment_pizzas

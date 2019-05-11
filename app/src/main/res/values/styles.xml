@@ -18,4 +18,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Theme.App.ThemeOne" parent="Base.Theme.App">
+        <item name="colorPrimary">@color/themeOneColorPrimary</item>
+        <item name="colorPrimaryDark">@color/themeOneColorPrimaryDark</item>
+        <item name="colorAccent">@color/themeOneColorAccent</item>
+    </style>
+
+    <style name="Theme.App.ThemeTwo" parent="Base.Theme.App">
+        <item name="colorPrimary">@color/themeTwoColorPrimary</item>
+        <item name="colorPrimaryDark">@color/themeTwoColorPrimaryDark</item>
+        <item name="colorAccent">@color/themeTwoColorAccent</item>
+    </style>
+
+
 </resources>

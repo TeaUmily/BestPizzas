@@ -8,6 +8,7 @@ import android.view.Window
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import osc.ada.terezijaumiljanovic.R
+import osc.ada.terezijaumiljanovic.bestpizzas.persistence.PizzaPrefs
 import osc.ada.terezijaumiljanovic.bestpizzas.ui.base.BaseActivity
 import osc.ada.terezijaumiljanovic.bestpizzas.ui.fragments.pizzalist.ClearAllListener
 import osc.ada.terezijaumiljanovic.bestpizzas.ui.fragments.pizzalist.PizzasFragment
@@ -71,12 +72,12 @@ class MainActivity : BaseActivity() {
     }
 
     private fun saveTheme(themeName: String) {
-        // todo
+        PizzaPrefs.store(PizzaPrefs.KEY_THEME_NAME, themeName)
+        recreate()
     }
 
     private fun getCurrentThemeName(): String? {
-        // todo
-        return "Default"
+        return PizzaPrefs.getString(PizzaPrefs.KEY_THEME_NAME,"Default")
     }
 
 }

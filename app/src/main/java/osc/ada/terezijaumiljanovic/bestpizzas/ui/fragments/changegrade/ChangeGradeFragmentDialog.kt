@@ -11,10 +11,11 @@ import kotlinx.android.synthetic.main.fragment_dialog_change_grade.*
 import osc.ada.terezijaumiljanovic.R
 import osc.ada.terezijaumiljanovic.bestpizzas.model.Pizza
 import osc.ada.terezijaumiljanovic.bestpizzas.persistence.FakeRepository
+import osc.ada.terezijaumiljanovic.bestpizzas.persistence.PizzaRoomRepository
 
 class ChangeGradeFragmentDialog : DialogFragment() {
 
-    private var repository = FakeRepository
+    private var repository = PizzaRoomRepository()
     private var gradeChangedListener: GradeChangedListener? = null
     lateinit var pizza: Pizza
     private var grade = 1
